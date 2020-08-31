@@ -1,0 +1,18 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+		</ion-buttons>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+		</ion-buttons>
+		<ion-title>Launch</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content #content class="content" text-center [class.blue]="activeIndex === 0" [class.green]="activeIndex === 1"
+	[class.purple]="activeIndex === 2" (swipeleft)="swipeLeftToRight()" (swiperight)="swipeRightToLeft()">
+	<body-content [selectedIndex]="activeIndex" #bodyContent></body-content>
+	<paging-component [pages]="pages" [selectedIndex]="nextIndex" (animationReady)="pageChangeAnimationReady($event)">
+	</paging-component>
+</ion-content>
