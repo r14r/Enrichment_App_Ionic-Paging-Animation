@@ -1,3 +1,5 @@
+**/.env.d
+
 node_modules/
 www/build/
 platforms/
