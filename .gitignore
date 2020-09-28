@@ -5,3 +5,6 @@ www/build/
 platforms/
 plugins/
 .DS_Store
+**/.env.d
+**/.env
+
